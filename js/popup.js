@@ -11,6 +11,21 @@ function setUnread(cnt){
     ba.setBadgeText({text: '' + cnt})
 }
 
+function spawnPopup(){
+
+}
+
+
+document.addEventListener('DOMContentLoaded', function(){
+    var spawnPop = document.getElementById('spawnPop');
+    spawnPop.addEventListener('click', function(){
+        spawnPopup();
+    });
+
+});
+
+
+
 setUnread(10);
 
 

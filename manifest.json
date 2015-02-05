@@ -3,7 +3,7 @@
     "name": "Human computable passwords",
     "description": "Google chrome extension implementing Human Computable Passwords as described by Blocki et al.",
     "version": "1.0",
-    
+
     "browser_action": {
         "default_icon": "pw-icon.png",
         "default_popup": "popup.html"
@@ -12,5 +12,5 @@
         "notifications",
         "activeTab"
     ]
-
+    
 }

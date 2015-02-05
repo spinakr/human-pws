@@ -1,0 +1,7 @@
+td {
+    text-align: right;
+}
+
+.test { 
+    background: green;
+}
