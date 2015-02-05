@@ -1,16 +1,12 @@
 {
+    "name": "Human Computable Passwords",
+    "description": "Password managment scheme using human computable functions",
+    "version": "0.1",
     "manifest_version": 2,
-    "name": "Human computable passwords",
-    "description": "Google chrome extension implementing Human Computable Passwords as described by Blocki et al.",
-    "version": "1.0",
-
-    "browser_action": {
-        "default_icon": "pw-icon.png",
-        "default_popup": "popup.html"
+    "app": {
+        "background":{
+            "scripts": ["background.js"]
+        }
     },
-    "permissions": [
-        "notifications",
-        "activeTab"
-    ]
-    
+    "icons": {"16": "icons/pw-icon.png", "128": "icons/pw-icon.png"}
 }
