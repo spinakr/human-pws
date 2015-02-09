@@ -1,0 +1,12 @@
+.animate-hide {
+    -webkit-transition:all linear 0.4s;
+    transition:all linear 0.4s;
+}
+
+.animate-hide.ng-hide {
+    opacity:0;
+}
+
+#submit-user-name{
+    display: none;
+}
