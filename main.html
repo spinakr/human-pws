@@ -21,15 +21,47 @@
             </div>
 
             <div id="challenges">
-                
-                <img ng-src="letters/letter_{{user.sites[0].challenges[count][0]}}.png"/>
-                <img ng-src="letters/letter_{{user.sites[0].challenges[count][1]}}.png"/>
-                <img ng-src="letters/letter_{{user.sites[0].challenges[count][2]}}.png"/>
-                <img ng-src="letters/letter_{{user.sites[0].challenges[count][3]}}.png"/>
 
-                <form class="respons">
-                    <input type="password" ng-change="count=respons.length" ng-model="respons" /> <br />
-                </form>
+
+            <table>
+                <tr>
+                    <td> <img ng-src="letters/letter_{{user.sites[0].challenges[count][9]}}.png"/></td>
+                    <td> <img ng-src="letters/letter_{{user.sites[0].challenges[count][10]}}.png"/></td>
+                    <td> <img ng-src="letters/letter_{{user.sites[0].challenges[count][11]}}.png"/></td>
+                    <td> <img ng-src="letters/letter_{{user.sites[0].challenges[count][12]}}.png"/></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td colspan="4" rowspan="5">
+                        <div id="password-field" 
+                            <form class="respons">
+                                <input type="password" ng-change="count=respons.length" ng-model="respons" /> <br />
+                            </form>
+                        </div>
+                    </td>
+
+                    <td> <img ng-src="letters/letter_{{user.sites[0].challenges[count][0]}}.png"/></td>
+                    <td> <img ng-src="letters/letter_{{user.sites[0].challenges[count][5]}}.png"/></td>
+                </tr>
+                <tr>
+                    <td> <img ng-src="letters/letter_{{user.sites[0].challenges[count][1]}}.png"/></td>
+                    <td> <img ng-src="letters/letter_{{user.sites[0].challenges[count][6]}}.png"/></td>
+                </tr>
+                <tr>
+                    <td> <img ng-src="letters/letter_{{user.sites[0].challenges[count][2]}}.png"/></td>
+                    <td> <img ng-src="letters/letter_{{user.sites[0].challenges[count][7]}}.png"/></td>
+                </tr>
+                <tr>
+                    <td> <img ng-src="letters/letter_{{user.sites[0].challenges[count][3]}}.png"/></td>
+                    <td> <img ng-src="letters/letter_{{user.sites[0].challenges[count][8]}}.png"/></td>
+                </tr>
+                <tr>
+                    <td> <img ng-src="letters/letter_{{user.sites[0].challenges[count][4]}}.png"/></td>
+                    <td> <img ng-src="letters/letter_{{user.sites[0].challenges[count][9]}}.png"/></td>
+                </tr>
+            </table>
+
+
             </div>
             
 

@@ -27,6 +27,11 @@ function Site(id, name){
     this.challenges.push(fooChallenge()); 
     this.challenges.push(fooChallenge()); 
     this.challenges.push(fooChallenge()); 
+    this.challenges.push(fooChallenge()); 
+    this.challenges.push(fooChallenge()); 
+    this.challenges.push(fooChallenge()); 
+    this.challenges.push(fooChallenge()); 
+    this.challenges.push(fooChallenge()); 
 }
 
 
@@ -37,7 +42,7 @@ function fooChallenge(){
     var letters = "abcdefghijklmnopqrstuvwxyz";
     var ch = [];
 
-    for(i=1; i<12; i++){
+    for(i=0; i<13; i++){
         ch.push(letters.charAt(Math.floor(Math.random()* 26)));
     }
     return ch;
