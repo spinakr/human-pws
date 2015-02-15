@@ -1,63 +1,45 @@
-var hcp = angular.module('human-computable-pws', ['ngAnimate', 'chromeStorage'])
-.controller("MainController", function($scope, StorageService, chromeStorage){
+var hcp = angular.module('human-computable-pws', [
+        'human-computable-pws.controllers',
+        'ngAnimate', 
+        'chromeStorage'
+        ]);
 
-    $scope.user = {};
-    $scope.user.id = '2';
-    chromeStorage.getOrElse($scope.user.id, function(){
-        keyValue = null;
-        return keyValue;
-    }).then(function(keyValue){
-        $scope.user = keyValue;
-    });
+hcp.config( ['$compileProvider', function( $compileProvider  ) {
+        var currentImgSrcSanitizationWhitelist = $compileProvider.imgSrcSanitizationWhitelist();
+        var newImgSrcSanitizationWhiteList = currentImgSrcSanitizationWhitelist.toString().slice(0,-1) 
+            + '|chrome-extension:' +currentImgSrcSanitizationWhitelist.toString().slice(-1);
 
-    
-
-
-
-    $scope.newUser = function () {
-        if ($scope.newUserName) {
-            $scope.user.name = this.newUserName ;
-            $scope.newUserName = '';
-            $scope.user.challenges = {};
- //           $scope.user.challenges.push(new Challenge(1, "firstChallenge"))
-
-            chromeStorage.set($scope.user.id, $scope.user);
-        }
+        console.log("Changing imgSrcSanitizationWhiteList from "+currentImgSrcSanitizationWhitelist+" to "+newImgSrcSanitizationWhiteList);
+        $compileProvider.imgSrcSanitizationWhitelist(newImgSrcSanitizationWhiteList);
     }
-
-    $scope.newChallenge = function () {
-        if ($scope.newChallenge){
-            $scope.user.challenges.push($scope.newChallenge);
-            chromeStorage.set($scope.user.id, $scope.user);
-        }
-    }
-
-    console.log($scope);
-});
+]);
 
 
-hcp.service('StorageService', function(){
-    this.save = function(id, obj){
-        chrome.storage.local.set({id: obj},function(){
-            console.log("Data stored!")
-        })
-    };
-
-    this.load = function(id){
-        chrome.storage.local.get(id, function(data){
-            console.log("Data loaded!") 
-            return data
-        })
-    };
-
-})
-
-var letters = "abcdefghijklmnopqrstuvwxyz";
-function Challenge(id, name){
+function Site(id, name){
     this.id = id;
     this.name = name;
-    this.letters = {};
-//    for(i=0; 10; i++){
-//        this.letters.push(letters.charAt(Math.floor(Math.random()*28)+1));
-//    }
+    this.challenges = [];
+
+    //add random challenges
+    this.challenges.push(fooChallenge()); 
+    this.challenges.push(fooChallenge()); 
+    this.challenges.push(fooChallenge()); 
+    this.challenges.push(fooChallenge()); 
+    this.challenges.push(fooChallenge()); 
+    this.challenges.push(fooChallenge()); 
 }
+
+
+
+
+
+function fooChallenge(){
+    var letters = "abcdefghijklmnopqrstuvwxyz";
+    var ch = [];
+
+    for(i=1; i<12; i++){
+        ch.push(letters.charAt(Math.floor(Math.random()* 26)));
+    }
+    return ch;
+}
+
