@@ -2,24 +2,42 @@ angular.module('human-computable-pws.controllers', [])
 .controller("MainController", function($scope, chromeStorage){
 
 
-    chromeStorage.clearCache();
     $scope.count = 0;
     $scope.respons = '';
 
+    //chromeStorage.clearCache();
 
     $scope.user = {};
-    $scope.user.id = '2';
 
     $scope.range = function(num){
         return new Array(num);
     }
-    
-    chromeStorage.getOrElse($scope.user.id, function(){
-        keyValue = null;
+   
+    $scope.loadUser = function(){
+        chromeStorage.getOrElse($scope.uname, function(){
+           
+        $scope.user.name = $scope.uname;
+
+        $scope.user.sites= [];
+        $scope.user.sites.push(new Site(1, "first site"));
+
+        chromeStorage.set($scope.user.name, $scope.user);
+        keyValue = $scope.user; 
+            
         return keyValue;
-    }).then(function(keyValue){
-        $scope.user = keyValue;
-    });
+        
+        
+        }).then(function(keyValue){
+            console.log(keyValue);
+            $scope.user = keyValue;
+        });
+        console.log("storage dump:");
+        chrome.storage.local.get(null, function(value){
+            console.log(value);
+        });
+
+    };
+
 
     $scope.newUser = function () {
         if ($scope.newUserName) {
@@ -28,8 +46,9 @@ angular.module('human-computable-pws.controllers', [])
             $scope.user.sites= [];
             $scope.user.sites.push(new Site(1, "first site"))
 
-            chromeStorage.set($scope.user.id, $scope.user);
-            console.log($scope);
+            chromeStorage.set($scope.user.name, $scope.user);
+            chromeStorage.updateDebuggingCache();
+            console.log(chromeStorage.getDebuggingCache());
         }
     }
 

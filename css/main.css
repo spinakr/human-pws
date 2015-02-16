@@ -7,6 +7,6 @@
     opacity:0;
 }
 
-#submit-user-name{
+.hidden-submit{
     display: none;
 }

@@ -15,8 +15,8 @@ hcp.config( ['$compileProvider', function( $compileProvider  ) {
 ]);
 
 
-function Site(id, name){
-    this.id = id;
+
+function Site(name){
     this.name = name;
     this.challenges = [];
 

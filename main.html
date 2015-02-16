@@ -14,14 +14,13 @@
             <h2 ng-bind="user.name"></h2>
            
             <div id="username" ng-hide="user.name" class="animate-hide">
-                <form ng-submit="newUser()" class="newUserForm">
-                    <input type="text" ng-model="newUserName" name="newUserName" /> <br />
-                    <input type="submit" id="submit-user-name" value="Submit"  />
+                <form ng-submit="loadUser()">
+                    <input type="text" ng-model="uname" name="uname" /> <br />
+                    <input type="submit" class="hidden-submit" value="Submit"  />
                 </form>
             </div>
 
-            <div id="challenges">
-
+            <div id="challenges" ng-show="user.name">
 
             <table>
                 <tr>
@@ -33,9 +32,11 @@
                 </tr>
                 <tr>
                     <td colspan="4" rowspan="5">
-                        <div id="password-field" 
+                        <div id="password-field" >
                             <form class="respons">
-                                <input type="password" ng-change="count=respons.length" ng-model="respons" /> <br />
+                                <input type="text" ng-change="count=respons.length" ng-model="respons" /> <br />
+                                <input type="submit" class="hidden-submit" value="Submit"  />
+
                             </form>
                         </div>
                     </td>
