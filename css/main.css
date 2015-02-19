@@ -1,3 +1,9 @@
+html, body{
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+}
 .animate-hide {
     -webkit-transition:all linear 0.4s;
     transition:all linear 0.4s;
@@ -9,4 +15,24 @@
 
 .hidden-submit{
     display: none;
+}
+
+.header{
+    background-color: yellow;
+    height: 20ex;
+}
+.footer{
+    position:absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: yellow;
+    height: 10ex;
+    padding:1ex; 
+}
+
+.contents{
+    background-color: gray;
+    height: 100%;
+    padding: 1ex;
+    padding-bottom: 10ex;
 }

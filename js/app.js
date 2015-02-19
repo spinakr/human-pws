@@ -15,30 +15,30 @@ hcp.config( ['$compileProvider', function( $compileProvider  ) {
 ]);
 
 
-
-function Site(name){
+function Site(id, name){
+    this.id = id;
     this.name = name;
     this.challenges = [];
 
     //add random challenges
-    this.challenges.push(fooChallenge()); 
-    this.challenges.push(fooChallenge()); 
-    this.challenges.push(fooChallenge()); 
-    this.challenges.push(fooChallenge()); 
-    this.challenges.push(fooChallenge()); 
-    this.challenges.push(fooChallenge()); 
-    this.challenges.push(fooChallenge()); 
-    this.challenges.push(fooChallenge()); 
-    this.challenges.push(fooChallenge()); 
-    this.challenges.push(fooChallenge()); 
-    this.challenges.push(fooChallenge()); 
+    this.challenges.push(randomChallenge()); 
+    this.challenges.push(randomChallenge()); 
+    this.challenges.push(randomChallenge()); 
+    this.challenges.push(randomChallenge()); 
+    this.challenges.push(randomChallenge()); 
+    this.challenges.push(randomChallenge()); 
+    this.challenges.push(randomChallenge()); 
+    this.challenges.push(randomChallenge()); 
+    this.challenges.push(randomChallenge()); 
+    this.challenges.push(randomChallenge()); 
+    this.challenges.push(randomChallenge()); 
 }
 
 
 
 
 
-function fooChallenge(){
+function randomChallenge(){
     var letters = "abcdefghijklmnopqrstuvwxyz";
     var ch = [];
 
