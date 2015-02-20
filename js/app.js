@@ -1,7 +1,8 @@
 var hcp = angular.module('human-computable-pws', [
         'human-computable-pws.controllers',
         'ngAnimate', 
-        'chromeStorage'
+        'chromeStorage',
+        'ngCookies'
         ]);
 
 hcp.config( ['$compileProvider', function( $compileProvider  ) {
@@ -14,6 +15,13 @@ hcp.config( ['$compileProvider', function( $compileProvider  ) {
     }
 ]);
 
+
+hcp.factory('sharingService', function(){
+    var sharingService = {
+        pw:''
+    };
+    return sharingService;
+});
 
 function Site(id, name){
     this.id = id;

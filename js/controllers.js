@@ -1,10 +1,19 @@
 angular.module('human-computable-pws.controllers', [])
-.controller("MainController", function($rootScope, $scope, chromeStorage){
+.controller("MainController", function($rootScope, $scope,$cookies, chromeStorage, sharingService){
 
 
-    $scope.count = 0;
-    $scope.respons = '';
+    
+    $rootScope.count = 0;
+    $rootScope.respons = '';
 
+    $scope.changed = function (lng){
+        console.log('changed: ' + lng);
+    };
+
+    $scope.pw = $cookies.pw;
+
+
+    $scope.shared = sharingService;
 
     $rootScope.user = {};
 
@@ -18,6 +27,7 @@ angular.module('human-computable-pws.controllers', [])
         return new Array(num);
     }
    
+
 
 
     $scope.newUser = function () {

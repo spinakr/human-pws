@@ -3,13 +3,22 @@
     "description": "Password managment scheme using human computable functions",
     "version": "0.1",
     "manifest_version": 2,
-    "app": {
-        "background":{
+    "background":{
             "scripts": ["background.js"]
-        }
     },
+    "content_scripts": [{
+        "matches": ["<all_urls>"],
+        "js": ["js/vendor/angular.js","js/app.js", "js/controllers.js", "js/directives.js", "background.js","js/vendor/angular-cookies.js", "js/vendor/angular-animate.js","js/vendor/angular-chrome-storage.js","open-dialog.js"],
+        "run_at": "document_end",
+        "all_frames": false
+    }],
     "icons": {"16": "icons/pw-icon.png", "128": "icons/pw-icon.png"},
     "permissions": [
-        "storage"
-        ]
+        "storage",
+        "tabs"
+        ],
+    "web_accessible_resources":[
+        "js/*"
+        ],
+    "content_security_policy": "script-src 'self'; object-src 'self'"
 }
