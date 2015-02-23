@@ -2,7 +2,8 @@ var hcp = angular.module('human-computable-pws', [
         'human-computable-pws.controllers',
         'ngAnimate', 
         'chromeStorage',
-        'ngCookies'
+        'ngCookies',
+        'ngRoute'
         ]);
 
 hcp.config( ['$compileProvider', function( $compileProvider  ) {
@@ -15,13 +16,18 @@ hcp.config( ['$compileProvider', function( $compileProvider  ) {
     }
 ]);
 
+hcp.config(['$routeProvider',
+    function($routeProvider){
+        $routeProvider.
+            when('/',{
+                templateUrl: 'partials/content.html',
+                controller: 'MainController'
+            }).
+            otherwise({
+                redirectTo: '/'
+            });
+}]);
 
-hcp.factory('sharingService', function(){
-    var sharingService = {
-        pw:''
-    };
-    return sharingService;
-});
 
 function Site(id, name){
     this.id = id;

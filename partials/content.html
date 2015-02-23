@@ -1,0 +1,56 @@
+<div class="container-fluid">
+
+<!--    <div id = "siteSelection" ng-show="user.name">
+        <select ng-options="site.name for site in user.sites" ng-model="selectedSite">
+        </select>
+    
+    </div> -->
+
+    <p ng-bind="dataService.url"> </p>
+    
+    
+    
+    <div id="challenges">
+
+    <table>
+        <tr>
+            <td> <img ng-src="letters/letter_{{user.sites[selectedSite.id].challenges[dataService.pw.length][9]}}.png"/></td>
+            <td> <img ng-src="letters/letter_{{user.sites[selectedSite.id].challenges[dataService.pw.length][10]}}.png"/></td>
+            <td> <img ng-src="letters/letter_{{user.sites[selectedSite.id].challenges[dataService.pw.length][11]}}.png"/></td>
+            <td> <img ng-src="letters/letter_{{user.sites[selectedSite.id].challenges[dataService.pw.length][12]}}.png"/></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="4" rowspan="5">
+                <div id="password-field" >
+                    <form class="respons">
+                        <input type="text" ng-model="dataService.pw" /> <br /> 
+                        <input type="submit" class="hidden-submit" value="Submit"  />
+
+                    </form>
+                </div>
+            </td>
+
+            <td> <img ng-src="letters/letter_{{user.sites[selectedSite.id].challenges[dataService.pw.length][0]}}.png"/></td>
+            <td> <img ng-src="letters/letter_{{user.sites[selectedSite.id].challenges[dataService.pw.length][5]}}.png"/></td>
+        </tr>
+        <tr>
+            <td> <img ng-src="letters/letter_{{user.sites[selectedSite.id].challenges[dataService.pw.length][1]}}.png"/></td>
+            <td> <img ng-src="letters/letter_{{user.sites[selectedSite.id].challenges[dataService.pw.length][6]}}.png"/></td>
+        </tr>
+        <tr>
+            <td> <img ng-src="letters/letter_{{user.sites[selectedSite.id].challenges[dataService.pw.length][2]}}.png"/></td>
+            <td> <img ng-src="letters/letter_{{user.sites[selectedSite.id].challenges[dataService.pw.length][7]}}.png"/></td>
+        </tr>
+        <tr>
+            <td> <img ng-src="letters/letter_{{user.sites[selectedSite.id].challenges[dataService.pw.length][3]}}.png"/></td>
+            <td> <img ng-src="letters/letter_{{user.sites[selectedSite.id].challenges[dataService.pw.length][8]}}.png"/></td>
+        </tr>
+        <tr>
+            <td> <img ng-src="letters/letter_{{user.sites[selectedSite.id].challenges[dataService.pw.length][4]}}.png"/></td>
+            <td> <img ng-src="letters/letter_{{user.sites[selectedSite.id].challenges[dataService.pw.length][9]}}.png"/></td>
+        </tr>
+    </table>
+    </div>
+
+</div>

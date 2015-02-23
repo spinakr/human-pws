@@ -1,4 +1,4 @@
-if(document.URL == "https://www.facebook.com/" && confirm('Open dialog for testing?')){
+//if(document.URL == "https://www.facebook.com/" && confirm('Open dialog for testing?')){
 
 
 
@@ -25,8 +25,8 @@ if(document.URL == "https://www.facebook.com/" && confirm('Open dialog for testi
     //});
 
 
-    chrome.runtime.sendMessage({type:'request_password'});
+ //   chrome.runtime.sendMessage({type:'request_password'});
 
-}
+//}
 
 
