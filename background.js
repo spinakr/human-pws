@@ -4,7 +4,7 @@ chrome.browserAction.onClicked.addListener(function() {
             type: 'panel',
             focused: true,
             height: 700,
-            width: 550,
+            width: 400,
         });
 });
 

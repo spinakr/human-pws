@@ -7,9 +7,9 @@
     </div> -->
 
     <p ng-bind="dataService.url"> </p>
-    
-    
-    
+
+    <select ng-model="selectedSite" ng-options="site.name for site in user.sites" ></select>
+
     <div id="challenges">
 
     <table>

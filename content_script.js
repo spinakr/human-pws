@@ -1,3 +1,4 @@
+window.onload = setTimeout(updateUrl(),500);
 
 var passwords = getPwdInputs(); 
 var pwField = passwords[0];
@@ -13,12 +14,6 @@ if(pwField){
     });
 }
 
-document.addEventListener("hashchange", function(){
-    console.log("send new urlhA");
-    chrome.runtime.sendMessage({newUrl: window.location.hostname},function(respons){
-        console.log("Respons new url: " + respons);
-    });
-});
 
 function getPwdInputs() {
       var ary = [];
@@ -32,4 +27,11 @@ function getPwdInputs() {
         }
           return ary;
 
+}
+
+function updateUrl(){
+    chrome.runtime.sendMessage({newUrl: window.location.hostname},function(respons){
+        console.log("URL changed to: "+ window.location.hostname);
+    });
+    console.log("URL changed to: "+ window.location.hostname);
 }

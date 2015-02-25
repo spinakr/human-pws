@@ -1,8 +1,8 @@
 hcp.service('DataService',['$timeout',
     function($timeout){
         var self = this;
-        this.pw = 'init';
-        this.url = 'startside';
+        this.pw = '';
+        this.url = '';
         var tmp;
         function handleMessage(){
             if(tmp.pwValue){
