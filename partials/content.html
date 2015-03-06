@@ -8,7 +8,7 @@
 
     <p ng-bind="dataService.url"> </p>
 
-    <select ng-model="selectedSite" ng-options="site.name for site in user.sites" ></select>
+    <select ng-model="selectedSite" ng-options="site.name for site in user.sites"  ></select>
 
     <div id="challenges">
 
@@ -25,11 +25,11 @@
                 <div id="password-field" >
                     <p>Calulation time:</p> 
                     <p ng-bind="dataService.calcTime"></p>
-                    <form class="respons">
+                    <!--<form class="respons">
                         <input type="text" ng-model="dataService.pw" /> <br /> 
                         <input type="submit" class="hidden-submit" value="Submit"  />
 
-                    </form>
+                    </form>-->
                 </div>
             </td>
 
@@ -43,7 +43,7 @@
         <tr>
             <td>2<img ng-src="letters/letter_{{user.sites[selectedSite.id].challenges[dataService.pw.length][2]}}.png"/></td>
             <td>7<img ng-src="letters/letter_{{user.sites[selectedSite.id].challenges[dataService.pw.length][7]}}.png"/></td>
-        </tr>
+        </tr> 
         <tr>
             <td>3<img ng-src="letters/letter_{{user.sites[selectedSite.id].challenges[dataService.pw.length][3]}}.png"/></td>
             <td>8<img ng-src="letters/letter_{{user.sites[selectedSite.id].challenges[dataService.pw.length][8]}}.png"/></td>

@@ -26,6 +26,7 @@ hcp.service('DataService',['$timeout', 'chromeStorage', '$resource',
             }
             if(tmp.newUrl){
                 self.url = tmp.newUrl;
+                //set selectedSite to the new url.
             }
         }
         chrome.runtime.onMessage.addListener(function(message,sender){

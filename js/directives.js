@@ -3,7 +3,7 @@ hcp.directive('footer', function(){
         restrict: 'A',
         replace: true,
         templateUrl: "/partials/footer.html",
-        controller: ['$scope', function($scope){
+        controller: ['$scope', 'chromeStorage', function($scope, chromeStorage){
             $scope.clearCache = function () {
             chromeStorage.clearCache();
             }
