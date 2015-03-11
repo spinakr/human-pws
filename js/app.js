@@ -17,8 +17,7 @@ hcp.config( ['$compileProvider', function( $compileProvider  ) {
     }
 ]);
 
-hcp.config(['$routeProvider',
-    function($routeProvider){
+hcp.config(['$routeProvider', function($routeProvider){
         $routeProvider.
             when('/',{
                 templateUrl: 'partials/content.html',

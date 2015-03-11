@@ -30,19 +30,24 @@ angular.module('human-computable-pws.controllers', [])
 })
 .controller("HeaderController", function($rootScope, chromeStorage, DataService){
 
-    chromeStorage.getOrElse("users", function(){
+    try{
+        chromeStorage.getOrElse("users", function(){
 
-        $rootScope.users = [];
-        return [];
-    }).then(function(keyValue){
-        $rootScope.users = keyValue;
-        $rootScope.user = $rootScope.users[0];
-        console.log("users: %o",$rootScope.users);
-        
-       // for(user in keyValue){
-       //     $rootScope.users[user] = keyValue[user];
-       // }
-    });
+            $rootScope.users = [];
+            return [];
+        }).then(function(keyValue){
+            $rootScope.users = keyValue;
+            $rootScope.user = $rootScope.users[0];
+            console.log("users: %o",$rootScope.users);
+            
+           // for(user in keyValue){
+           //     $rootScope.users[user] = keyValue[user];
+           // }
+        });
+    }
+    catch(err){
+        console.log("Not run as extension")
+    }
 
 
     $rootScope.loadUser = function(){

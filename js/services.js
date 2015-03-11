@@ -29,11 +29,15 @@ hcp.service('DataService',['$timeout', 'chromeStorage', '$resource',
                 //set selectedSite to the new url.
             }
         }
-        chrome.runtime.onMessage.addListener(function(message,sender){
-            tmp = message;
-            $timeout(handleMessage);
-                                            
-        });            
-
+        try{
+            chrome.runtime.onMessage.addListener(function(message,sender){
+                tmp = message;
+                $timeout(handleMessage);
+                                                
+            });            
+        }
+        catch(err){
+            console.log("not extension")
+        }
 }]);
 
