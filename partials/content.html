@@ -5,36 +5,39 @@
         </select>
     
     </div> -->
+<div id="form-container">
 
     <p ng-bind="dataService.url"> </p>
 
-    <select ng-model="selectedSite" ng-options="site.name for site in user.sites"  ></select>
+    <select ng-model="selectedSite" align="center" ng-options="site.name for site in user.sites"  ></select>
 
     <div id="challenges">
 
-    <table>
+    <table align="center" class="challenges">
         <tr>
-            <td> <img ng-src="letters/letter_{{user.sites[selectedSite.id].challenges[dataService.pw.length][9]}}.png"/></td>
-            <td> <img ng-src="letters/letter_{{user.sites[selectedSite.id].challenges[dataService.pw.length][10]}}.png"/></td>
-            <td> <img ng-src="letters/letter_{{user.sites[selectedSite.id].challenges[dataService.pw.length][11]}}.png"/></td>
+            <td> <img ng-src="letters/letter_{{user.sites[selectedSite.id].challenges[dataService.pw.length][10]}}.png"/>
+             <img ng-src="letters/letter_{{user.sites[selectedSite.id].challenges[dataService.pw.length][11]}}.png"/></td>
             <td> <img ng-src="letters/letter_{{user.sites[selectedSite.id].challenges[dataService.pw.length][12]}}.png"/></td>
+            <td> <img ng-src="letters/letter_{{user.sites[selectedSite.id].challenges[dataService.pw.length][13]}}.png"/></td>
             <td></td>
         </tr>
-        <tr>
+    </table>
+        <!--<tr>
             <td colspan="4" rowspan="5">
                 <div id="password-field" >
-                    <p>Calulation time:</p> 
-                    <p ng-bind="dataService.calcTime"></p>
                     <form class="respons">
-                        <input type="text" ng-model="dataService.pw" /> <br /> 
+                        <input type="text" ng-model="dataService.pw" class="form-control" /> <br /> 
                         <input type="submit" class="hidden-submit" value="Submit"  />
 
                     </form>
                 </div>
             </td>
+        -->
 
-            <td>0 <img ng-src="letters/letter_{{user.sites[selectedSite.id].challenges[dataService.pw.length][0]}}.png"/></td>
-            <td>5 <img ng-src="letters/letter_{{user.sites[selectedSite.id].challenges[dataService.pw.length][5]}}.png"/></td>
+    <table align="center" class="challenges">
+        <tr>
+            <td>0<img ng-src="letters/letter_{{user.sites[selectedSite.id].challenges[dataService.pw.length][0]}}.png"/></td>
+            <td>5<img ng-src="letters/letter_{{user.sites[selectedSite.id].challenges[dataService.pw.length][5]}}.png"/></td>
         </tr>
         <tr>
             <td>1<img ng-src="letters/letter_{{user.sites[selectedSite.id].challenges[dataService.pw.length][1]}}.png"/></td>
@@ -54,5 +57,7 @@
         </tr>
     </table>
     </div>
+
+</div>
 
 </div>

@@ -3,9 +3,8 @@
         <div class="container"> 
             <div class="navbar-header">
                 <a class="navbar-brand" href="/main.html">Human Computable Passwords </a>
-                <p class="nav navbar-text pull-right" ng-bind="user.name"> </p>
+                <br>
             </div>
-
             <form ng-submit="loadUser()" class="navbar-form navbar-right" ng-hide="user.name">
                 <input type="text" ng-model="uname" name="uname" /> <br />
                 <input type="submit" class="hidden-submit" value="Submit" />
@@ -18,3 +17,4 @@
     <div id="username" ng-hide="user.name" class="animate-hide">
     </div>
 </div>
+

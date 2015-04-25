@@ -56,7 +56,7 @@ function randomChallenge(){
     var letters = "abcdefghijklmnopqrstuvwxyz";
     var ch = [];
 
-    for(i=0; i<13; i++){
+    for(i=0; i<14; i++){
         ch.push(letters.charAt(Math.floor(Math.random()* 26)));
     }
     return ch;

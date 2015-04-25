@@ -1,0 +1,40 @@
+body {
+    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 15px;
+    line-height: 1.42857143;
+    color: #ffffff;
+    background-color: #222222;
+}
+
+
+
+.challenges td{
+
+    padding: 5px;
+}
+
+#form-container{
+	background:#2f2f2f; 
+	margin-bottom:20px;
+	border-radius:5px; 
+}
+
+#form-container .page-header{ 
+    background:#151515; 
+    margin:0; 
+    padding:30px; 
+    border-top-left-radius:5px; 
+    border-top-right-radius:5px; 
+}
+
+.navbar-header{
+    float: left;
+    padding: 3px;
+    text-align: center;
+    width: 100%;
+}
+.navbar-brand{
+    float: none;
+}
+
+
