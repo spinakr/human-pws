@@ -5,6 +5,10 @@ angular.module('human-computable-pws.controllers', [])
 
     $scope.dataService = DataService;
 
+    $scope.newSiteButton = true;
+    $scope.newSite = function(){
+        $scope.newSiteButton = false;
+    }
 
 //    $scope.newUser = function () {
 //        if ($scope.newUserName) {
@@ -61,7 +65,10 @@ angular.module('human-computable-pws.controllers', [])
                 sites: [
                     new Site(0, "studweb.ntnu.no"),
                     new Site(1, "facebook.com"),
-                    new Site(2, "twitter.com")
+                    new Site(2, "accounts.google.com"),
+                    new Site(3, "github.com")
+
+
                     ]
             };
             $rootScope.users.push(newUser) ;

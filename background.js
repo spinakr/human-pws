@@ -3,7 +3,7 @@ chrome.browserAction.onClicked.addListener(function() {
             url: chrome.extension.getURL('main.html'),
             type: 'panel',
             focused: true,
-            height: 500,
+            height: 520,
             width: 400,
         });
 });

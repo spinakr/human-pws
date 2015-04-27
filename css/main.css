@@ -11,6 +11,15 @@
     display: none;
 }
 
+.dropDownColor {
+    background-color: #2f2f2f;
+}
+
+.newSiteButton {
+    padding: 5ex;
+
+}
+
 /*.header{
     background-color: yellow;
     height: 20ex;
