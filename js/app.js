@@ -28,29 +28,26 @@ hcp.config(['$routeProvider', function($routeProvider){
             });
 }]);
 
-
-function Site(id, name){
-    this.id = id;
-    this.name = name;
-    this.challenges = [];
-
-    //add random challenges
-    this.challenges.push(randomChallenge()); 
-    this.challenges.push(randomChallenge()); 
-    this.challenges.push(randomChallenge()); 
-    this.challenges.push(randomChallenge()); 
-    this.challenges.push(randomChallenge()); 
-    this.challenges.push(randomChallenge()); 
-    this.challenges.push(randomChallenge()); 
-    this.challenges.push(randomChallenge()); 
-    this.challenges.push(randomChallenge()); 
-    this.challenges.push(randomChallenge()); 
-    this.challenges.push(randomChallenge()); 
+function searchList(site, sites){                                                                                                                                                                           
+    if(sites == undefined) return false;
+    for(var i = 0; i<sites.length; i++){
+        if(sites[i].name == site){
+            return sites[i];
+        }
+    }
+    return false;
 }
 
 
 
+function Site(name){
+    this.name = name;
+    this.challenges = [];
 
+    for(var j=0; j<14; j++){
+        this.challenges.push(randomChallenge()); 
+    }
+}
 
 function randomChallenge(){
     var letters = "abcdefghijklmnopqrstuvwxyz";
